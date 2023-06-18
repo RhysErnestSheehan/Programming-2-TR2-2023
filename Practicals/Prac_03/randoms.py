@@ -21,4 +21,5 @@
 # I saw line three print a floating point number between 2.5 and 5.5.
 # The smallest number I could of seen was 2.5 and the largest was 5.5.
 
-
+import random
+print(random.randint(1, 100))
