@@ -9,12 +9,14 @@ Answer the following questions:
 try:
     numerator = int(input("Enter the numerator: "))
     denominator = int(input("Enter the denominator: "))
-    fraction = numerator / denominator
-    print(fraction)
+    if denominator == 0:
+        print("Please enter a number other than zero")
+        denominator = int(input("Enter the denominator: "))
+    else:
+        fraction = numerator / denominator
+        print(fraction)
 except ValueError:
     print("Numerator and denominator must be valid numbers!")
-except ZeroDivisionError:
-    print("Cannot divide by zero!")
 print("Finished.")
 
 # A ValueError will occur when the numerator or denominator is not a valid number,
@@ -22,5 +24,5 @@ print("Finished.")
 
 # A ZeroDivisionError will occur when the user enters zero as the denominator
 
-# Yes you coud change the code to avoid the possibility of a ZeroDivisionError by adding error checking
+# Yes you could change the code to avoid the possibility of a ZeroDivisionError by adding error checking
 # so if the user tries to divide by zero it asks them to enter a number that is not zero
