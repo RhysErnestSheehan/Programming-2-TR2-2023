@@ -19,7 +19,7 @@ OUTPUT_FILE = 'Capitalist_Conrad.txt'
 
 out_file = open(OUTPUT_FILE, 'w')
 price = INITIAL_PRICE
-print(f"${price:,.2f}")
+print(f"${price:,.2f}", file=out_file)
 
 while MIN_PRICE <= price <= MAX_PRICE:
     price_change = 0
