@@ -1,6 +1,6 @@
 """Rhys Sheehan CP1404 Prac 04 lists warmup"""
 
-# numbers = [3, 1, 4, 1, 5, 9, 2]
+numbers = [3, 1, 4, 1, 5, 9, 2]
 # numbers[0]
 # This will print the first value in the list.
 # numbers[-1]
@@ -22,3 +22,11 @@
 # numbers + [6, 5, 3]
 # This will add the numbers six, five and three to the numbers list
 
+# Q1)
+
+# Q2)
+numbers[-1] - 1
+# Q3)
+numbers[2:]
+# Q4)
+9 in numbers
