@@ -9,4 +9,4 @@ class ProgrammingLanguage:
         pass
 
     def __str__(self):
-        return f"{self.language}, {self.reflection}, First appear in {self.year}"
+        return f"{self.language}, Reflection={self.reflection}, First appeared in {self.year}"
