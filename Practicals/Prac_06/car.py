@@ -1,4 +1,5 @@
 """CP1404/CP5632 Practical - Car class example."""
+"""Reminder: I was given extension per slack message on 17/07/23"""
 
 
 class Car:
