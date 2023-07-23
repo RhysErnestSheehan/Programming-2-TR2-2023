@@ -30,6 +30,7 @@ def load_projects():
     projects = []
     input_filename = input("Enter the name of a projects file: ")
     in_file = open(input_filename, 'r')
+    in_file.close()
     for line in in_file:
         line = line.strip()
         parts = line.split(',')
@@ -41,8 +42,12 @@ def load_projects():
         return projects
 
 
-def save_projects():
-    pass
+def save_projects(projects):
+    output_filename = input("Enter the name of a projects file: ")
+    out_file = open(output_filename, 'w')
+    for project in projects:
+        print(project, file=out_file)
+    out_file.close()
 
 
 def display_projects():
