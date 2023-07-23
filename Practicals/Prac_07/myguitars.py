@@ -11,6 +11,7 @@ class Guitar:
 def main():
     infile = open("guitars.csv", 'r')
     guitars = []
+    # Add guitars to guitar lists
     for line in infile:
         guitar = []
         line = line.strip()  #
@@ -24,6 +25,7 @@ def main():
         guitar.append(Guitar.cost)
         guitars.append(guitar)
     print(guitars)
+    # Gets guitars from the user, creates a guitar list for each guitar and add them to the guitars list
     number_of_guitars = int(input("How many guitars do you have? "))
     for new_guitars in range(number_of_guitars):
         name = input("Name: ")
@@ -38,6 +40,8 @@ def main():
         print(new_guitar, file=outfile)
     print(guitars)
     infile.close()
+
+# This was as far as I got. I couldn't figure out how to strip the list before or after saving it to the file.
 
 
 main()
