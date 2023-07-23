@@ -24,6 +24,19 @@ def main():
         guitar.append(Guitar.cost)
         guitars.append(guitar)
     print(guitars)
+    number_of_guitars = int(input("How many guitars do you have? "))
+    for new_guitars in range(number_of_guitars):
+        name = input("Name: ")
+        year = int(input("year: "))
+        cost = float(input("cost: "))
+        guitar.append(name)
+        guitar.append(year)
+        guitar.append(cost)
+        guitars.append(guitar)
+    outfile = open("guitars.csv", "w")
+    for new_guitar in guitars:
+        print(new_guitar, file=outfile)
+    print(guitars)
     infile.close()
 
 
