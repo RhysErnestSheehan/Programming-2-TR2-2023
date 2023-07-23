@@ -9,13 +9,13 @@ def main():
         if choice == 'L':
             load_projects()
         elif choice == 'S':
-            pass
+            save_projects()
         elif choice == 'D':
             pass
         elif choice == 'F':
             pass
         elif choice == 'A':
-            pass
+            add_project(projects)
         elif choice == 'u':
             pass
         else:
@@ -38,8 +38,7 @@ def load_projects():
         parts[3] = float(parts[3])
         parts[4] = float(parts[4])
         projects.append(parts)
-        print(projects)
-        return projects
+    return projects
 
 
 def save_projects(projects):
@@ -58,8 +57,19 @@ def filter_by_data():
     pass
 
 
-def add_project():
-    pass
+def add_project(projects):
+    print("Let's add a new project")
+    project = []
+    name = input("Name: ")
+    start_data = input("Start data: ")
+    cost_estimate = float(input("Start data: "))
+    percent_complete = float(input("Percent complete: "))
+    project.append(name)
+    project.append(start_data)
+    project.append(cost_estimate)
+    project.append(percent_complete)
+    projects.append(project)
+    return projects
 
 
 def update_project():
