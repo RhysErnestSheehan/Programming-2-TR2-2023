@@ -10,15 +10,21 @@ class Guitar:
 
 def main():
     infile = open("guitars.csv", 'r')
-    guitar = []
+    guitars = []
     for line in infile:
+        guitar = []
         line = line.strip()  #
         parts = line.split(',')
+        Guitar.name = parts[0]
+        Guitar.year = parts[1]
         parts[1] = int(parts[1])
-        guitar.append(parts)
-    print(guitar)
+        Guitar.cost = parts[2]
+        guitar.append(Guitar.name)
+        guitar.append(Guitar.year)
+        guitar.append(Guitar.cost)
+        guitars.append(guitar)
+    print(guitars)
     infile.close()
-    guitar.sort()
 
 
 main()
