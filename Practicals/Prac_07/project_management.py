@@ -3,11 +3,12 @@ MENU = "Menu:\n (L)oad Projects\n (S)ave Projects\n (D)isplay Projects\n (F)ilte
 
 def main():
     print("Project Management - by Rhys Sheehan")
+    projects = []
     print(MENU)
     choice = input(">>> ").upper()
     while choice != 'Q':
         if choice == 'L':
-            load_projects()
+            load_projects(projects)
         elif choice == 'S':
             save_projects()
         elif choice == 'D':
@@ -26,11 +27,10 @@ def main():
             print("Have a nice day. :)")
 
 
-def load_projects():
-    projects = []
+def load_projects(projects):
     input_filename = input("Enter the name of a projects file: ")
     in_file = open(input_filename, 'r')
-    in_file.close()
+    in_file.readline()
     for line in in_file:
         line = line.strip()
         parts = line.split(',')
@@ -38,6 +38,7 @@ def load_projects():
         parts[3] = float(parts[3])
         parts[4] = float(parts[4])
         projects.append(parts)
+    in_file.close()
     return projects
 
 
@@ -62,7 +63,7 @@ def add_project(projects):
     project = []
     name = input("Name: ")
     start_data = input("Start data: ")
-    cost_estimate = float(input("Start data: "))
+    cost_estimate = float(input("Cost estimate: "))
     percent_complete = float(input("Percent complete: "))
     project.append(name)
     project.append(start_data)
