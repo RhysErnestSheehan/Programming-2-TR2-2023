@@ -12,7 +12,7 @@ def main():
         elif choice == 'S':
             save_projects()
         elif choice == 'D':
-            pass
+            display_projects(projects)
         elif choice == 'F':
             pass
         elif choice == 'A':
@@ -50,8 +50,11 @@ def save_projects(projects):
     out_file.close()
 
 
-def display_projects():
-    pass
+def display_projects(projects):
+    print("incomplete Projects")
+    for project in projects:
+        if projects[3] > 100:
+            print(project)
 
 
 def filter_by_data():
