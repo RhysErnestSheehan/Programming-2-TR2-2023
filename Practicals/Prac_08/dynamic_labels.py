@@ -11,5 +11,15 @@ class DynamicLabelsApp(App):
         super().__init__(**kwargs)
         self.names = ["Bob Brown", "Cat Cyan", "Oren Ochre"]
 
+    def build(self):
+        """Build the Kivy GUI."""
+        self.title = "dynamic labels"
+        self.root = Builder.load_file('dynamic_labels.kv')
+        for name in self.names:
+            # create a label for each name in the list
+            temp_label = Label(text=name)
+            self.root.ids.main.add_widget(temp_label)
+        return self.root
+
 
 DynamicLabelsApp().run()
